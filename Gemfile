@@ -34,6 +34,7 @@ gem 'turbolinks', '~> 5'
 group :development, :test do
   gem 'pry-rails', '~> 0.3.4'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 group :development do

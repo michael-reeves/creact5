@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+50.times do
+  skill = Skill.new
+  skill.name = Faker::Lorem.word
+  skill.details = Faker::Lorem.sentence(100)
+  skill.level   = [*0..2].sample
+  skill.save!
+  puts "Generated skill ##{skill.id}"
+end
