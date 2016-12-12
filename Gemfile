@@ -21,8 +21,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 2.5'
+
+# Build JSON
+gem 'responders', '~> 2.3'
+gem 'active_model_serializers', '~> 0.10.3'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -35,6 +38,7 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.4'
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'faker', '~> 1.6', '>= 1.6.6'
+  gem 'factory_girl_rails', '~> 4.7'
 end
 
 group :development do
@@ -44,6 +48,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
